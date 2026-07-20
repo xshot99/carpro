@@ -1,0 +1,354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10000011 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000001 /* AppDelegate.swift */; };
+		10000012 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000002 /* SceneDelegate.swift */; };
+		10000013 /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000003 /* CarPlaySceneDelegate.swift */; };
+		10000014 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000004 /* ContentView.swift */; };
+		10000015 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000005 /* VideoPlayerView.swift */; };
+		10000016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000006 /* SettingsView.swift */; };
+		10000017 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000007 /* VideoItem.swift */; };
+		10000018 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10000008 /* VideoManager.swift */; };
+		10000019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1000000B /* LaunchScreen.storyboard */; };
+		1000001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1000000C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10000002 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10000003 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
+		10000004 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		10000005 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		10000006 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		10000007 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
+		10000008 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		10000009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1000000A /* CarMovie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarMovie.entitlements; sourceTree = "<group>"; };
+		1000000B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1000000C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1000000D /* CarMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1000000E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10000021 /* = */ = {
+			isa = PBXGroup;
+			children = (
+				10000022 /* CarMovie */,
+				1000002B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10000022 /* CarMovie */ = {
+			isa = PBXGroup;
+			children = (
+				1000000A /* CarMovie.entitlements */,
+				10000023 /* App */,
+				10000024 /* CarPlay */,
+				10000025 /* Views */,
+				10000026 /* Models */,
+				10000027 /* Managers */,
+				10000028 /* Resources */,
+			);
+			path = CarMovie;
+			sourceTree = "<group>";
+		};
+		10000023 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10000001 /* AppDelegate.swift */,
+				10000002 /* SceneDelegate.swift */,
+				10000009 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10000024 /* CarPlay */ = {
+			isa = PBXGroup;
+			children = (
+				10000003 /* CarPlaySceneDelegate.swift */,
+			);
+			path = CarPlay;
+			sourceTree = "<group>";
+		};
+		10000025 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10000004 /* ContentView.swift */,
+				10000005 /* VideoPlayerView.swift */,
+				10000006 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10000026 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10000007 /* VideoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10000027 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				10000008 /* VideoManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		10000028 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1000000B /* LaunchScreen.storyboard */,
+				1000000C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1000002B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1000000D /* CarMovie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1000000F /* CarMovie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10000030 /* Build configuration list for PBXNativeTarget "CarMovie" */;
+			buildPhases = (
+				10000010 /* Sources */,
+				1000000E /* Frameworks */,
+				10000020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarMovie;
+			productName = CarMovie;
+			productReference = 1000000D /* CarMovie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10000029 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1000000F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 1000002A /* Build configuration list for PBXProject "CarMovie" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10000021;
+			productRefGroup = 1000002B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1000000F /* CarMovie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10000020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1000001A /* Assets.xcassets in Resources */,
+				10000019 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10000010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10000011 /* AppDelegate.swift in Sources */,
+				10000012 /* SceneDelegate.swift in Sources */,
+				10000013 /* CarPlaySceneDelegate.swift in Sources */,
+				10000014 /* ContentView.swift in Sources */,
+				10000015 /* VideoPlayerView.swift in Sources */,
+				10000016 /* SettingsView.swift in Sources */,
+				10000017 /* VideoItem.swift in Sources */,
+				10000018 /* VideoManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		10000031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10000032 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10000033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CarMovie/CarMovie.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CarMovie/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarMovie;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcsyhi.carmovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10000034 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CarMovie/CarMovie.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CarMovie/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CarMovie;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcsyhi.carmovie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1000002A /* Build configuration list for PBXProject "CarMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10000031 /* Debug */,
+				10000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10000030 /* Build configuration list for PBXNativeTarget "CarMovie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10000033 /* Debug */,
+				10000034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 10000029 /* Project object */;
+}
