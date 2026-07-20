@@ -1,0 +1,74 @@
+name: Build CarMovie IPA
+
+on:
+  push:
+    branches: [main, master]
+    tags: ['v*']
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build IPA
+    runs-on: macos-13
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify Xcode
+        run: |
+          xcodebuild -version
+          swift --version
+          xcode-select -p
+
+      - name: Build archive
+        run: |
+          xcodebuild archive \
+            -project CarMovie.xcodeproj \
+            -scheme CarMovie \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination "generic/platform=iOS" \
+            -archivePath build/CarMovie.xcarchive \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            DEVELOPMENT_TEAM="" \
+            ONLY_ACTIVE_ARCH=NO \
+            SKIP_INSTALL=NO \
+            BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+            2>&1 | tee build.log
+
+      - name: Verify build
+        run: |
+          if grep -q "BUILD SUCCEEDED" build.log; then
+            echo "=== BUILD SUCCEEDED ==="
+          else
+            echo "=== BUILD FAILED ==="
+            grep -B2 -A2 "error:" build.log | head -80
+            exit 1
+          fi
+
+      - name: Package IPA
+        run: |
+          APP="build/CarMovie.xcarchive/Products/Applications/CarMovie.app"
+          if [ ! -d "$APP" ]; then
+            echo "ERROR: .app not found at $APP"
+            find build/CarMovie.xcarchive -name "*.app" -type d 2>/dev/null || true
+            exit 1
+          fi
+          rm -rf build/Payload
+          mkdir -p build/Payload
+          cp -R "$APP" build/Payload/
+          cd build && zip -r CarMovie.ipa Payload && cd ..
+          echo "IPA: $(ls -lh build/CarMovie.ipa | awk '{print $5}')"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CarMovie.ipa
+          path: build/CarMovie.ipa
+          retention-days: 90
+          compression-level: 0
